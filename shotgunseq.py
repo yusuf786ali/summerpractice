@@ -17,7 +17,6 @@ for i in range(0, int(times)):
         if j in range(value, value2):
         #if (j >= value) and (j <= value2):
             genome[j] += 1
-   #genome[value:value2] = [x + 1 for x in genome[value:value2]]
     print(value, value2)
 
 total = 0
