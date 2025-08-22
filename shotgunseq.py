@@ -13,7 +13,12 @@ for i in range(int(genomesize)):
 for i in range(0, int(times)):
     value  = random.randint(0, (len(genome)-(int(reads))))
     value2 = value + int(reads)
-    genome[value:value2] = [x + 1 for x in genome[value:value2]]
+    for j in range(0, len(genome)):
+        if j in range(value, value2):
+        #if (j >= value) and (j <= value2):
+            genome[j] += 1
+   #genome[value:value2] = [x + 1 for x in genome[value:value2]]
+    print(value, value2)
 
 total = 0
 for num in genome:
@@ -21,3 +26,4 @@ for num in genome:
         total += 1
 
 print('% coverage is', ((total/len(genome))*100))
+print(genome)
